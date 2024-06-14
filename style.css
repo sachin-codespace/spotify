@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: antiquewhite;
+    font-family: Arial, sans-serif;
+}
+
+.nav {
+    height: 50px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.logo img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.6em;
+}
+
+.links ul {
+    display: flex;
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: gray;
+    margin-right: 5vw;
+    cursor: pointer;
+}
+.links ul a li {
+    margin: 0 20px;
+    font-size: 1.9em;
+    font-family: sans-serif;
+}
+
+.container {
+    background-color: black;
+    margin: 1vw auto;
+    padding: 1vw;
+    width: 90%;
+    height: 70vh;
+    border-radius: 1vw;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url('https://img.freepik.com/premium-photo/black-music-notes-song-melody-flowing-air-dark-background-copy-space-your-text-article-left-concept-music-aesthetic-rhythm-3d-illustration-rendering_34515-906.jpg');
+    background-size: cover;
+    overflow: hidden;
+}
+
+.songlist {
+    margin-bottom: 1vw;
+    max-height: 59vh;
+}
+
+.songlist h1 {
+    color: rgb(183, 172, 172);
+    margin-bottom: 1vw;
+}
+
+.songlist-items {
+    overflow-y: auto;
+    padding-right: 1vw;
+    height: 100%;
+}
+
+.songlist-items::-webkit-scrollbar {
+    width: .7vw;
+}
+
+.songlist-items::-webkit-scrollbar-track {
+    background: #333;
+    border-radius: 1vw;
+}
+
+.songlist-items::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 1vw;
+    border: .2vw solid #333;
+}
+
+.songitem {
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: .5vw;
+    padding: .5vw 1vw;
+    margin: 1vw 0;
+    font-size: 1.3vw;
+}
+
+.songitem img {
+    height: 3vw;
+    border-radius: 10px;
+}
+
+.timestamp {
+    margin: 0 10px;
+}
+
+.songlistplay i {
+    cursor: pointer;
+}
+
+.bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+#songprogress {
+    width: 90%;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.icons i {
+    margin: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.songInfo {
+    display: flex;
+    align-items: center;
+    margin-top: .6vw;
+}
+
+.songInfo img {
+    opacity: 0;
+    width: 30px;
+    margin-right: 10px;
+    transition: opacity 1s ease-in;
+}
+
+@media (min-width: 600px) {
+    .nav {
+        height: 60px;
+    }
+
+    .logo img {
+        width: 50px;
+    }
+
+    .logo {
+        font-size: 2em;
+    }
+
+    .links ul li {
+        margin: 0 30px;
+        font-size: 1.4em;
+    }
+
+    .songlist {
+        width: 45%;
+        margin-right: 5%;
+    }
+
+    .songtemplate {
+        width: 45%;
+    }
+}
+
+@media (max-width: 950px) {
+    .songlist-items {
+        width: 88vw;
+    }
+
+    .songitem {
+        font-size: 2vw;
+    }
+
+    .songitem img {
+        height: 3.5vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav {
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .links ul li {
+        margin: 1vw 2vw;
+    }
+
+    .songlistplay {
+        align-self: flex-end;
+    }
+
+    .songitem {
+        font-size: 3.2vw;
+        align-items: center;
+    }
+
+    .songitem img {
+        height: 5vw;
+    }
+}
+
+
+
+@media (max-width: 300px) {
+   a{
+    font-size: 4.5vw;
+   }
+   .logo{
+    height: 3vw;
+    margin-top: 3vw;
+   }
+   h1{
+    font-size: 6vw;
+   }
+   .container{
+    padding: 2vw 0 0 2vw;
+   }
+}
